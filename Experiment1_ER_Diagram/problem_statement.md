@@ -1,4 +1,4 @@
-# Experiment 1: Entity-Relationship (ER) Diagram
+ Experiment 1: Entity-Relationship (ER) Diagram
 
 ## 🎯 Objective:
 To understand and apply the concepts of ER modeling by creating an ER diagram for a real-world application.
@@ -51,7 +51,13 @@ Design a database for patient management, appointments, medical records, and bil
 University / Hospital (choose one)
 
 ## ER Diagram:
-![ER Diagram](er_diagram.png)
+
+<img width="956" height="604" alt="Screenshot 2025-08-24 214735" src="https://github.com/user-attachments/assets/dc24acf6-7d7d-4e23-a9cc-de28051922c2" />
+
+
+<img width="961" height="652" alt="Screenshot 2025-08-24 214717" src="https://github.com/user-attachments/assets/99a40185-73d5-40b5-9f4e-b8a234465cfa" />
+
+
 
 ## Entities and Attributes:
 - Entity1: Attributes
@@ -70,3 +76,4 @@ University / Hospital (choose one)
 Brief explanation of why you chose certain entities, relationships, and assumptions
 
 ## RESULT
+verified ER Diagram 
