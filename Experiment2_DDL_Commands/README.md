@@ -104,124 +104,165 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
---
--- Paste Question 1 here
 
-```sql
--- Paste your SQL code below for Question 1
+<img width="832" height="392" alt="image" src="https://github.com/user-attachments/assets/5fa2ae47-5cbb-460b-b0d7-78dbf3866015" />
+
 ```
-
+INSERT INTO Employee(EmployeeID, Name, Department, Salary)
+SELECT EmployeeID, Name, Department,Salary
+FROM Former_employees;
+```
 **Output:**
 
-![Output1](output.png)
+<img width="1116" height="313" alt="image" src="https://github.com/user-attachments/assets/ec00753d-9750-40a1-95b8-93b96457ad20" />
+
 
 **Question 2**
----
--- Paste Question 2 here
 
-```sql
--- Paste your SQL code below for Question 2
+<img width="905" height="227" alt="image" src="https://github.com/user-attachments/assets/f440c33e-ff8d-4a25-b299-3dae14e5e124" />
+
 ```
-
+CREATE TABLE Bonuses  (
+            BonusID INTEGER PRIMARY KEY,
+            EmployeeID INTEGER,
+            BonusAmount REAL CHECK (BonusAmount > 0),
+            BonusDate DATE,
+            Reason TEXT NOT NULL,
+            FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID))
+```
 **Output:**
 
-![Output2](output.png)
+<img width="1138" height="318" alt="image" src="https://github.com/user-attachments/assets/4c4e845d-0271-4589-b6f8-490222e13572" />
 
 **Question 3**
----
--- Paste Question 3 here
 
-```sql
--- Paste your SQL code below for Question 3
+<img width="1130" height="258" alt="image" src="https://github.com/user-attachments/assets/329cd313-66a3-4531-ae0b-2cab432d6abd" />
+
+```
+INSERT INTO Employee (EmployeeID,Name,Position,Department,Salary)
+VALUES (1,'Sarah Parker','Manager','HR',60000);
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="1138" height="318" alt="image" src="https://github.com/user-attachments/assets/378a8e72-ddea-417a-a21c-dafa68757530" />
+
 
 **Question 4**
----
--- Paste Question 4 here
 
-```sql
--- Paste your SQL code below for Question 4
+<img width="1123" height="369" alt="image" src="https://github.com/user-attachments/assets/429e18e4-391d-460a-b34f-890df3adbd8f" />
+
+
 ```
+CREATE TABLE Departments (DepartmentID INTEGER, DepartmentName TEXT);
 
+```
 **Output:**
 
-![Output4](output.png)
+<img width="1127" height="356" alt="image" src="https://github.com/user-attachments/assets/16667e1c-be92-452d-a405-7d41cce7aa8c" />
 
 **Question 5**
----
--- Paste Question 5 here
 
-```sql
--- Paste your SQL code below for Question 5
+<img width="1044" height="506" alt="image" src="https://github.com/user-attachments/assets/2a89cfa1-1a53-4d02-bc4b-f12a4fd09730" />
+
+
+```
+
+INSERT INTO  Student_details (RollNo, Name, Gender, Subject, MARKS)
+VALUES (202, 'Ella King', 'F', 'Chemistry', 87),
+       (203, 'James Bond', 'M', 'Literature', 78);
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="1113" height="256" alt="image" src="https://github.com/user-attachments/assets/17caaadf-bc17-45df-89a7-4ab7040b7630" />
+
 
 **Question 6**
----
--- Paste Question 6 here
 
-```sql
--- Paste your SQL code below for Question 6
+<img width="919" height="161" alt="image" src="https://github.com/user-attachments/assets/2a75b9bb-202a-4015-8841-4f0260a33cea" />
+
+
 ```
 
+CREATE TABLE Orders (
+        OrderID INTEGER PRIMARY KEY,
+        OrderDate DATE NOT NULL,
+        CustomerID INTEGER,
+        FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID));
+```
 **Output:**
 
-![Output6](output.png)
+<img width="1111" height="262" alt="image" src="https://github.com/user-attachments/assets/452ea455-5597-4dcd-a422-bce44c57217d" />
+
 
 **Question 7**
----
--- Paste Question 7 here
 
-```sql
--- Paste your SQL code below for Question 7
+<img width="1114" height="456" alt="image" src="https://github.com/user-attachments/assets/fa57920d-ca93-4bfe-88dd-d95bfe911598" />
+
+```
+ALTER TABLE employee ADD COLUMN department_id INTEGER;
+ALTER TABLE employee ADD COLUMN manager_id INTEGER DEFAULT NULL;
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="1102" height="271" alt="image" src="https://github.com/user-attachments/assets/a4d51e4b-0cb9-4a1b-aaa0-485db7049f82" />
+
 
 **Question 8**
----
--- Paste Question 8 here
 
-```sql
--- Paste your SQL code below for Question 8
+<img width="915" height="204" alt="image" src="https://github.com/user-attachments/assets/889a4362-981a-4f4b-9c9d-091414d366c1" />
+
+```
+
+CREATE TABLE Shipments (
+    ShipmentID INTEGER PRIMARY KEY,
+    ShipmentDate DATE,
+    SupplierID INTEGER,
+    OrderID INTEGER,
+    FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID),
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID));
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="1122" height="247" alt="image" src="https://github.com/user-attachments/assets/3c8bce6d-c523-40a0-9dae-4432f363b98a" />
+
 
 **Question 9**
----
--- Paste Question 9 here
 
-```sql
--- Paste your SQL code below for Question 9
+<img width="1118" height="384" alt="image" src="https://github.com/user-attachments/assets/60c519e5-0175-4146-9188-a209d3a38c79" />
+
+```
+
+ALTER TABLE Student_details
+ADD COLUMN Date_of_birth Date;
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="1115" height="325" alt="image" src="https://github.com/user-attachments/assets/60301651-e526-4587-951f-6120b4c5e4aa" />
+
 
 **Question 10**
----
--- Paste Question 10 here
+<img width="770" height="289" alt="image" src="https://github.com/user-attachments/assets/643492db-0e1f-46ff-aea8-9f44c3959ad9" />
 
-```sql
--- Paste your SQL code below for Question 10
+```
+CREATE TABLE orders (
+        ord_id TEXT NOT NULL CHECK (length(ord_id) = 4),
+        item_id TEXT NOT NULL,
+        ord_date DATE NOT NULL,
+        ord_qty INTEGER,
+        cost INTEGER,
+        PRIMARY KEY (item_id,ord_date)
+        );
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="1117" height="308" alt="image" src="https://github.com/user-attachments/assets/8ca1f00e-df89-4240-994d-cfb7bbb7934c" />
+
 
 
 ## RESULT
